@@ -38,7 +38,7 @@ $(PROJ_NAME): $(OBJS)
 
 %.o: %.cpp
 	@echo "Compiling $@ ..."
-	$(CXX) -O0 -g -c $^ -o $@ -I$(INC_DIR) -I/usr/include/rscontrol
+	$(CXX) -O0 -g -c $^ -o $@ -I$(INC_DIR)
 	@echo "\033[94m$@ Compiled!\033[0m"
 
 folders:

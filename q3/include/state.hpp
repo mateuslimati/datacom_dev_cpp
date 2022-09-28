@@ -12,26 +12,70 @@
 #ifndef __STATE_HPP__
 #define __STATE_HPP__
 
+#include <context.hpp>
+#include "event.hpp"
+
+namespace protocol::context
+{
+    class Context;
+}
+
 /* Declarações no namespace protocol::state */
 namespace protocol::state
 {
+    /**
+     * @brief
+     *
+     */
     class State
     {
     protected:
-        Context *context;
+        context::Context *context;
 
     public:
-        virtual ~State()
-        {
-        }
+        virtual ~State();
+        void SetContext(context::Context *context);
+        virtual void Handle(protocol::event::Event event) = 0;
+    };
 
-        void set_context(Context *context)
-        {
-            this->context_ = context;
-        }
+    /**
+     * @brief
+     *
+     */
+    class LinkDown : public State
+    {
+    public:
+        void Handle(protocol::event::Event event) override;
+    };
 
-        virtual void Handle1() = 0;
-        virtual void Handle2() = 0;
+    /**
+     * @brief
+     *
+     */
+    class SendingStart : public State
+    {
+    public:
+        void Handle(protocol::event::Event event) override;
+    };
+
+    /**
+     * @brief
+     *
+     */
+    class StartReceivedSendConfiguration : public State
+    {
+    public:
+        void Handle(protocol::event::Event event) override;
+    };
+    
+    /**
+     * @brief 
+     * 
+     */
+    class SendingKeepAlive : public protocol::state::State
+    {
+    public:
+        void Handle(protocol::event::Event event) override;
     };
 
 };

@@ -13,38 +13,27 @@
 #define __CONTEXT_HPP__
 
 #include <state.hpp>
+#include <memory>
+#include "event.hpp"
+
+namespace protocol::state {
+    class State;
+}
 
 /* Declarações no namespace protocol::state */
 namespace protocol::context
 {
     class Context
     {
-        /**
-         * @var State A reference to the current state of the Context.
-         */
     private:
-        protocol::state::State *state;
+        std::unique_ptr<protocol::state::State> state;
 
     public:
-        Context(protocol::state::State *state) : state(nullptr)
-        {
-            this->TransitionTo(state);
-        }
-        ~Context()
-        {
-            delete state;
-        }
-        /**
-         * The Context allows changing the State object at runtime.
-         */
-        void TransitionTo(protocol::state::State *state)
-        {
-            if (this->state != nullptr)
-                delete this->state;
-            this->state = state;
-            this->state->set_context(this);
-        }
+        Context(std::unique_ptr<protocol::state::State> state);
+        ~Context();
+        void TransitionTo(std::unique_ptr<protocol::state::State> state);
+        void Event(protocol::event::Event event);
     };
-};  
+};
 
 #endif //__CONTEXT_HPP__
