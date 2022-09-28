@@ -1,6 +1,6 @@
 # DATACOM - Embedded C/C++ Developer Challenge
 
-![alt text](https://www.datacom.com.br/assets/site/images/main-logo.png)
+[![N|Solid](./images/datacom.png)](https://www.datacom.com.br/)
 
 ## A função funciona? 
 
