@@ -1,6 +1,6 @@
 # DATACOM - Embedded C/C++ Developer Challenge
 
-![alt text](https://www.datacom.com.br/assets/site/images/main-logo.png)
+[![N|Solid](./images/datacom.png)](https://www.datacom.com.br/)
 
 ## Desafio
 
@@ -17,3 +17,19 @@ Implemente, usando sua linguagem de preferência, a seguinte máquina de estados
 Deve ser implementada uma função que recebe o estado atual e o evento associado. Deverá
 retornar o próximo estado e realizar as chamadas a funções que realizam as ações referentes a cada
 estado
+
+## Como compilar o projeto
+
+Só precisa fazer um make.
+
+```sh
+make
+```
+
+## Como executar o projeto
+
+Execute o arquivo criado na pasta build.
+
+```sh
+./build/protocol-state-machine
+```
