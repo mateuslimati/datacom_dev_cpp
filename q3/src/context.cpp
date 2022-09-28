@@ -1,7 +1,7 @@
 /**
  * @file context.cpp
  * @author Mateus Lima Alves (mateuslima.ti@gmail.com)
- * @brief
+ * @brief Context class methods.
  * @version 0.1
  * @date 2022-09-28
  *
@@ -9,8 +9,9 @@
  *
  */
 
-#include <context.hpp>
 #include <iostream>
+
+#include "context.hpp"
 
 /**
  * @brief Construct a new protocol::context::Context::Context object

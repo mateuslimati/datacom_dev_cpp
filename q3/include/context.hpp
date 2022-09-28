@@ -1,7 +1,7 @@
 /**
  * @file context.hpp
  * @author Mateus Lima Alves (mateuslima.ti@gmail.com)
- * @brief
+ * @brief Context class headers.
  * @version 0.1
  * @date 2022-09-28
  *
@@ -12,8 +12,9 @@
 #ifndef __CONTEXT_HPP__
 #define __CONTEXT_HPP__
 
-#include <state.hpp>
 #include <memory>
+
+#include "state.hpp"
 #include "event.hpp"
 
 namespace protocol::state {

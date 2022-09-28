@@ -1,7 +1,7 @@
 /**
  * @file state.hpp
  * @author Mateus Lima Alves (mateuslima.ti@gmail.com)
- * @brief
+ * @brief State class methods.
  * @version 0.1
  * @date 2022-09-28
  *
@@ -12,7 +12,7 @@
 #ifndef __STATE_HPP__
 #define __STATE_HPP__
 
-#include <context.hpp>
+#include "context.hpp"
 #include "event.hpp"
 
 namespace protocol::context

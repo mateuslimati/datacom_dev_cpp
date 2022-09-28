@@ -1,7 +1,7 @@
 /**
  * @file event.hpp
  * @author Mateus Lima Alves (mateuslima.ti@gmail.com)
- * @brief
+ * @brief Event class headers.
  * @version 0.1
  * @date 2022-09-28
  *
